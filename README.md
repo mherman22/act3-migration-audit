@@ -34,8 +34,8 @@ changes. Details in [02](findings/02-distro-setup-defects.md).
 
 Details in [03](findings/03-form-defects-fixed.md).
 
-**3. 17 ACT 2.0 fields have no home in any of the 18 ACT 3.0 schemas.** Four forms reached full
-parity; five have real gaps. The three most consequential:
+**3. At least 18 ACT 2.0 fields have no home in any of the 18 ACT 3.0 schemas.** Three forms reached
+full parity; six have real gaps. The three most consequential:
 
 | Missing field | Form | Why it matters |
 |---|---|---|
@@ -52,7 +52,7 @@ Full table in [01](findings/01-form-parity.md).
 | Echocardiogram | 15 | 15 | 0 |
 | Electrocardiogram | 2 | 2 | 0 |
 | INR Monitoring | 2 | 2 | 0 |
-| Hospital Admission | 5 | 5 | 0 |
+| Hospital Admission | 5 | 4 | 1 |
 | Consultation Visit | 33 | 31 | 2 renames |
 | BPG Delivery | 5 | 2 | 2 |
 | Oral Adherence | 5 | 2 | 2 |
@@ -80,9 +80,11 @@ approaches produced roughly 74 false findings between them. Most notably, the O3
 renders date pickers with no `<label>` element, so every `Date of ...` field looks absent to a DOM
 scrape when it is present in the schema. See [04](findings/04-method.md).
 
-**Gaps are identified by label.** A field reported missing may exist under a label the matcher did
-not associate. Each of the 17 was hand-checked against the schemas, but confirm against the concept
-CSVs before acting on any individual one.
+**Gaps are identified by label, and the count is a floor.** Coverage was checked globally across
+all 18 schemas, because ACT 2.0's consultation was split into several ACT 3.0 forms. That means a
+field present in the *wrong* form can satisfy the check. This actually happened: Hospital
+Admission's **Outcome** was scored as covered because `Surgery Outcome` exists in
+`rhd_interventions.json`. Corrected on 11 September. Other gaps may be hidden the same way.
 
 ## Cross-cutting observations
 

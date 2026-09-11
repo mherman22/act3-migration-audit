@@ -33,7 +33,7 @@ Net: 204 questions across 18 ACT 3.0 forms, against 109 ACT 2.0 fields.
 | Echocardiogram | 15 | 15 | **0** | RHD Echocardiogram |
 | Electrocardiogram | 2 | 2 | **0** | RHD Electrocardiogram |
 | INR Monitoring | 2 | 2 | **0** | RHD INR Monitoring + Anticoagulation Monitoring |
-| Hospital Admission | 5 | 5 | **0** | RHD Hospital Admission |
+| Hospital Admission | 5 | 4 | **1** | RHD Hospital Admission |
 | Consultation Visit | 33 | 31 | 2 renames | RHD Consultation Visit + 4 split-out forms |
 | BPG Delivery | 5 | 2 | **2** | RHD BPG Delivery |
 | Oral Adherence | 5 | 2 | **2** | RHD Oral Adherence |
@@ -41,7 +41,7 @@ Net: 204 questions across 18 ACT 3.0 forms, against 109 ACT 2.0 fields.
 | Interventions and Outcomes | 26 | 17 | **8** | RHD Interventions and Outcomes + Cardiac Intervention |
 | Research Participation | 1 | 0 | **1** | none |
 
-**17 ACT 2.0 fields have no home in any of the 18 schemas.** Six others flagged by the audit turned
+**At least 18 ACT 2.0 fields have no home in any of the 18 schemas** (17 originally reported, plus Hospital Admission's Outcome, found later). Six others flagged by the audit turned
 out to be renames and are fine.
 
 ## The forms are not a 1:1 mapping
@@ -91,11 +91,24 @@ ACT 2.0 also sets `isCreatable` here, so clinicians can type off-list values. Th
 INR record per patient with readings in a JSON array; the distro splits readings into their own
 encounters, which is the better model and gives every reading a real date.
 
-### Hospital Admission — parity reached
+### Hospital Admission — 1 gap
 
 ![Hospital Admission](../screenshots/form-comparisons/hospital_admission_forms.png)
 
-5 of 5 covered.
+**Corrected 11 September 2026.** Originally recorded as 5 of 5. It is 4 of 5: **Outcome** is missing.
+
+The error was in the matcher, not the data. Because ACT 2.0's single consultation was split
+across several ACT 3.0 forms, coverage was checked **globally across all 18 schemas**. ACT's
+`Outcome` therefore matched `Surgery Outcome` in `rhd_interventions.json` and was counted as
+covered, even though `rhd_hospital.json` has no outcome field of any kind.
+
+Independently confirmed: `rhd_hospital.json` carries two `_specBranching` notes,
+"If Outcome = Transfer to another facility" and "If Outcome = Discharge to home", both branching
+on a field that is not in the form. Somebody knew it belonged there.
+
+**Consequence for this audit: 17 gaps is a floor, not a ceiling.** Global matching can let a field
+in the wrong form satisfy the check, so other gaps may be hidden the same way. Re-running the
+audit per form pair rather than globally would tighten it.
 
 ### Consultation Visit — covered, via five forms
 
