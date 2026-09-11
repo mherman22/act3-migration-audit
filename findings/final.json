@@ -1,0 +1,29 @@
+{
+  "renamed": [
+    "Systolic BP",
+    "Diastolic BP",
+    "If injection(s) late, why?",
+    "Adherence Based On",
+    "Maternal Complications Postpartum",
+    "Date of Procedure"
+  ],
+  "absent": [
+    "Date of Injection",
+    "Injection Tolerance",
+    "Date of Adherence Estimate",
+    "Explanation if Adherence is Below 80%",
+    "Date of Last Menstrual Period",
+    "Gravidity",
+    "Parity",
+    "Date of Delivery",
+    "Primary Surgeon/Cardiologist",
+    "With Visiting Team",
+    "BSA",
+    "Blood Group",
+    "RACHs Score",
+    "Procedural Outcome",
+    "Was the patient rehospitalized within 30 days?",
+    "Patient Follow-Up Required",
+    "Would you like to be considered?"
+  ]
+}

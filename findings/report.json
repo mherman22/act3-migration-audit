@@ -1,0 +1,1267 @@
+{
+  "consultation_visit_forms": {
+    "act_labels": [
+      "Aortic Regurgitation",
+      "Aortic Stenosis",
+      "Consultation Visit Location",
+      "Date of Consultation Visit",
+      "Date of Electrocardiogram",
+      "Diastolic BP",
+      "Electrocardiogram Result",
+      "Heart Rate",
+      "Height",
+      "Interval History",
+      "Is endocarditis prophylaxis recommended",
+      "Key Findings/Recommendations from this Visit",
+      "Left Ventricular Ejection Fraction",
+      "Left Ventricular Function",
+      "Left Ventricular Size",
+      "Mitral Regurgitation",
+      "Mitral Stenosis",
+      "Mitral Valve Annulus Diameter",
+      "Mitral Valve Anterior Leaflet Length",
+      "NYHA Classification",
+      "Next Consultation Time Amount",
+      "Next Consultation Time Period",
+      "Other Findings on Echocardiogram",
+      "Oxygen Saturation",
+      "Physical Exam",
+      "Provider",
+      "Pulmonary Hypertension",
+      "Respiratory Rate",
+      "Systolic BP",
+      "Tricuspid Regurgitation",
+      "Tricuspid Stenosis",
+      "Weight",
+      "Wilkins Score",
+      "mmHg"
+    ],
+    "act_fields": [
+      "blood_pressure_diastolic",
+      "blood_pressure_systolic",
+      "contraindications",
+      "date_of_service",
+      "description",
+      "emotion-insertion-point",
+      "heart_rate",
+      "height",
+      "interval_history",
+      "key_findings",
+      "next_consultation_visit_period",
+      "oxygen_saturation",
+      "physical_exam",
+      "provider",
+      "reason_why_no_sap",
+      "respiratory_rate",
+      "theme-color",
+      "viewport",
+      "weight"
+    ],
+    "o3_forms": [
+      "RHD Consultation Visit",
+      "RHD Allergies",
+      "RHD Chronic Health Conditions",
+      "RHD Anticoagulation",
+      "RHD Interventional Recommendations"
+    ],
+    "o3_questions": [
+      {
+        "label": "Date of Consultation Visit",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "Consultation Visit Location",
+        "rendering": "ui-select-extended",
+        "answers": 0
+      },
+      {
+        "label": "Provider",
+        "rendering": "ui-select-extended",
+        "answers": 0
+      },
+      {
+        "label": "Interval History",
+        "rendering": "textarea",
+        "answers": 0
+      },
+      {
+        "label": "Chronic Health Condition",
+        "rendering": "repeating",
+        "answers": 0
+      },
+      {
+        "label": "Chronic Health Condition",
+        "rendering": "select",
+        "answers": 19
+      },
+      {
+        "label": "Date Added",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "Allergy",
+        "rendering": "repeating",
+        "answers": 0
+      },
+      {
+        "label": "Allergy",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Reaction (Allergies)",
+        "rendering": "group",
+        "answers": 0
+      },
+      {
+        "label": "Reaction (Allergies)",
+        "rendering": "checkbox",
+        "answers": 5
+      },
+      {
+        "label": "Other Allergies",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Date Added",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "RHD Complications",
+        "rendering": "repeating",
+        "answers": 0
+      },
+      {
+        "label": "RHD Complications",
+        "rendering": "select",
+        "answers": 10
+      },
+      {
+        "label": "Date Added",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "Height (cm)",
+        "rendering": "number",
+        "answers": 0
+      },
+      {
+        "label": "Weight (kg)",
+        "rendering": "number",
+        "answers": 0
+      },
+      {
+        "label": "Heart Rate (BPM)",
+        "rendering": "number",
+        "answers": 0
+      },
+      {
+        "label": "Respiratory Rate (breaths/min)",
+        "rendering": "number",
+        "answers": 0
+      },
+      {
+        "label": "Oxygen Saturation (%)",
+        "rendering": "number",
+        "answers": 0
+      },
+      {
+        "label": "Systolic Blood Pressure (mmHg)",
+        "rendering": "number",
+        "answers": 0
+      },
+      {
+        "label": "Diastolic Blood Pressure (mmHg)",
+        "rendering": "number",
+        "answers": 0
+      },
+      {
+        "label": "NYHA Classification",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Physical Exam",
+        "rendering": "textarea",
+        "answers": 0
+      },
+      {
+        "label": "Key Findings/Recommendations from this Visit",
+        "rendering": "textarea",
+        "answers": 0
+      },
+      {
+        "label": "Secondary Antibiotic Prophylaxis",
+        "rendering": "repeating",
+        "answers": 0
+      },
+      {
+        "label": "Secondary Antibiotic Prophylaxis",
+        "rendering": "select",
+        "answers": 10
+      },
+      {
+        "label": "Date Started",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "Date Stopped",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "Reason Stopped",
+        "rendering": "select",
+        "answers": 5
+      },
+      {
+        "label": "If not given SAP, why?",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Secondary Antibiotic Prophylaxis Duration",
+        "rendering": "select",
+        "answers": 6
+      },
+      {
+        "label": "Secondary Antibiotic Prophylaxis Data Entry",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Cardiac Medication",
+        "rendering": "repeating",
+        "answers": 0
+      },
+      {
+        "label": "Cardiac Medication",
+        "rendering": "select",
+        "answers": 49
+      },
+      {
+        "label": "Dosing (Consultation Visit)",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Dosing Interval",
+        "rendering": "select",
+        "answers": 5
+      },
+      {
+        "label": "Date Started",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "Date Stopped",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "Is Endocarditis Prophylaxis Recommended",
+        "rendering": "radio",
+        "answers": 2
+      },
+      {
+        "label": "Interventional Recommendation(s)",
+        "rendering": "repeating",
+        "answers": 0
+      },
+      {
+        "label": "Procedure Type",
+        "rendering": "select",
+        "answers": 2
+      },
+      {
+        "label": "Interventional Recommendation(s)",
+        "rendering": "select",
+        "answers": 40
+      },
+      {
+        "label": "Urgency",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Completed",
+        "rendering": "radio",
+        "answers": 2
+      },
+      {
+        "label": "Next Consultation Time Amount",
+        "rendering": "number",
+        "answers": 0
+      },
+      {
+        "label": "Next Consultation Time Period",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Penicillin Allergy",
+        "rendering": "radio",
+        "answers": 2
+      },
+      {
+        "label": "Evidence",
+        "rendering": "select",
+        "answers": 2
+      },
+      {
+        "label": "Reaction (Allergies)",
+        "rendering": "group",
+        "answers": 0
+      },
+      {
+        "label": "Reaction (Allergies)",
+        "rendering": "checkbox",
+        "answers": 5
+      },
+      {
+        "label": "Other Allergies",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Hematology/Oncology",
+        "rendering": "group",
+        "answers": 0
+      },
+      {
+        "label": "Hematology/Oncology",
+        "rendering": "checkbox",
+        "answers": 4
+      },
+      {
+        "label": "Cardiovascular Disorders",
+        "rendering": "group",
+        "answers": 0
+      },
+      {
+        "label": "Cardiovascular Disorders",
+        "rendering": "checkbox",
+        "answers": 5
+      },
+      {
+        "label": "Chronic Respiratory Diseases",
+        "rendering": "group",
+        "answers": 0
+      },
+      {
+        "label": "Chronic Respiratory Diseases",
+        "rendering": "checkbox",
+        "answers": 3
+      },
+      {
+        "label": "Digestive diseases",
+        "rendering": "group",
+        "answers": 0
+      },
+      {
+        "label": "Digestive diseases",
+        "rendering": "checkbox",
+        "answers": 3
+      },
+      {
+        "label": "Neurological/Metal Health",
+        "rendering": "group",
+        "answers": 0
+      },
+      {
+        "label": "Neurological/Metal Health",
+        "rendering": "checkbox",
+        "answers": 6
+      },
+      {
+        "label": "Diabetes and Kidney Diseases",
+        "rendering": "group",
+        "answers": 0
+      },
+      {
+        "label": "Diabetes and Kidney Diseases",
+        "rendering": "checkbox",
+        "answers": 3
+      },
+      {
+        "label": "Date (Anticoagulation)",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "Type of Anticoagulation",
+        "rendering": "group",
+        "answers": 0
+      },
+      {
+        "label": "Type of Anticoagulation",
+        "rendering": "checkbox",
+        "answers": 5
+      },
+      {
+        "label": "Date Recommendation Made",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "Type of Intervention",
+        "rendering": "group",
+        "answers": 0
+      },
+      {
+        "label": "Type of Intervention",
+        "rendering": "checkbox",
+        "answers": 2
+      },
+      {
+        "label": "Cardiac catheterization type",
+        "rendering": "group",
+        "answers": 0
+      },
+      {
+        "label": "Cardiac catheterization type",
+        "rendering": "checkbox",
+        "answers": 3
+      },
+      {
+        "label": "Intervention Complete",
+        "rendering": "radio",
+        "answers": 2
+      },
+      {
+        "label": "Cardiac surgery type",
+        "rendering": "select",
+        "answers": 3
+      }
+    ]
+  },
+  "bpg_delivery_forms": {
+    "act_labels": [
+      "Any adverse reactions to last injection?",
+      "Date of Injection *",
+      "Facility",
+      "If injection(s) late, why?",
+      "Injection Tolerance"
+    ],
+    "act_fields": [
+      "anaphylaxis_events_description",
+      "date_of_service",
+      "description",
+      "emotion-insertion-point",
+      "theme-color",
+      "time_between_injection_and_symptom",
+      "viewport"
+    ],
+    "o3_forms": [
+      "RHD BPG Delivery"
+    ],
+    "o3_questions": [
+      {
+        "label": "Date of Service",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "If Injection is Late, Why?",
+        "rendering": "select",
+        "answers": 6
+      },
+      {
+        "label": "Adverse Reaction",
+        "rendering": "group",
+        "answers": 0
+      },
+      {
+        "label": "Adverse Reaction",
+        "rendering": "checkbox",
+        "answers": 9
+      },
+      {
+        "label": "Skin Mucosa Signs or Symptoms",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Respiratory Signs or Symptoms",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Cardiovascular Signs or Symptoms",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Abdominal/Pelvic Signs or Symptoms",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Neurological Signs or Symptoms",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Signs or Symptoms Risk Factors",
+        "rendering": "select",
+        "answers": 4
+      }
+    ]
+  },
+  "oral_adherence_forms": {
+    "act_labels": [
+      "Adherence Based On",
+      "Adherence Estimate (%)",
+      "Date of Adherence Estimate",
+      "Explanation if Adherence is Below 80%",
+      "New Prescription Duration"
+    ],
+    "act_fields": [
+      "adherence_estimate",
+      "date_of_service",
+      "description",
+      "emotion-insertion-point",
+      "theme-color",
+      "viewport"
+    ],
+    "o3_forms": [
+      "RHD Oral Adherence"
+    ],
+    "o3_questions": [
+      {
+        "label": "Weeks in Reporting Period",
+        "rendering": "number",
+        "answers": 0
+      },
+      {
+        "label": "Adherence Estimage",
+        "rendering": "number",
+        "answers": 0
+      },
+      {
+        "label": "Adherence Estimate Based On",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Other Details (Oral Adherence)",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Dosing (Oral Adherence)",
+        "rendering": "select",
+        "answers": 3
+      },
+      {
+        "label": "Prescription Duration",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Tablets Given/Prescribed",
+        "rendering": "number",
+        "answers": 0
+      }
+    ]
+  },
+  "echocardiogram_forms": {
+    "act_labels": [
+      "Aortic Regurgitation",
+      "Aortic Stenosis",
+      "Date of Echocardiogram",
+      "Left Ventricular Ejection Fraction",
+      "Left Ventricular Function",
+      "Left Ventricular Size",
+      "Mitral Regurgitation",
+      "Mitral Stenosis",
+      "Mitral Valve Annulus Diameter",
+      "Mitral Valve Anterior Leaflet Length",
+      "Other Findings on Echocardiogram",
+      "Pulmonary Hypertension",
+      "Tricuspid Regurgitation",
+      "Tricuspid Stenosis",
+      "Wilkins Score",
+      "cm"
+    ],
+    "act_fields": [
+      "date_of_service",
+      "description",
+      "echocardiogram_key_findings",
+      "emotion-insertion-point",
+      "if_patient_unsuitable_for_bav_why",
+      "left_ventricular_ejection_fraction",
+      "mitral_valve_annulus_diameter",
+      "mitral_valve_anterior_leaflet_length",
+      "patient_suitable_mitral_valve_repair_reasoning",
+      "theme-color",
+      "viewport"
+    ],
+    "o3_forms": [
+      "RHD Echocardiogram"
+    ],
+    "o3_questions": [
+      {
+        "label": "Date of Echocardiogram",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "Mitral Regurgitation",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Is patient suitable for mitral valve repair",
+        "rendering": "select",
+        "answers": 2
+      },
+      {
+        "label": "Reasoning",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Mitral stenosis severity",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Is patient suitable for BAV?",
+        "rendering": "select",
+        "answers": 2
+      },
+      {
+        "label": "Reasoning",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Aortic Regurgitation",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Aortic Stenosis",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Tricuspid Regurgitation",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Tricuspid Stenosis",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Left Ventricular Ejection Fraction (%)",
+        "rendering": "number",
+        "answers": 0
+      },
+      {
+        "label": "Left Ventricular Function",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Left Ventricular Size",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Pulmonary hypertension severity",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Mitral Valve Annulus Diameter (cm)",
+        "rendering": "number",
+        "answers": 0
+      },
+      {
+        "label": "Mitral Valve Anterior Leaflet Length (cm)",
+        "rendering": "number",
+        "answers": 0
+      },
+      {
+        "label": "Wilkins Score",
+        "rendering": "select",
+        "answers": 16
+      },
+      {
+        "label": "Other Findings on Echocardiogram",
+        "rendering": "textarea",
+        "answers": 0
+      }
+    ]
+  },
+  "electrocardiogram_forms": {
+    "act_labels": [
+      "Date of Electrocardiogram",
+      "Electrocardiogram Result"
+    ],
+    "act_fields": [
+      "date_of_service",
+      "description",
+      "emotion-insertion-point",
+      "theme-color",
+      "viewport"
+    ],
+    "o3_forms": [
+      "RHD Electrocardiogram"
+    ],
+    "o3_questions": [
+      {
+        "label": "Date of Electrocardiogram",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "Electrocardiogram Result",
+        "rendering": "checkbox",
+        "answers": 25
+      },
+      {
+        "label": "Other Electrocardiogram Finding",
+        "rendering": "text",
+        "answers": 0
+      }
+    ]
+  },
+  "inr_monitoring_form": {
+    "act_labels": [
+      "INR Target",
+      "Indication"
+    ],
+    "act_fields": [
+      "description",
+      "emotion-insertion-point",
+      "theme-color",
+      "viewport"
+    ],
+    "o3_forms": [
+      "RHD INR Monitoring",
+      "RHD Anticoagulation Monitoring"
+    ],
+    "o3_questions": [
+      {
+        "label": "Indication",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "INR Info",
+        "rendering": "repeating",
+        "answers": 0
+      },
+      {
+        "label": "INR Target",
+        "rendering": "select",
+        "answers": 3
+      },
+      {
+        "label": "Date Updated",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "INR",
+        "rendering": "number",
+        "answers": 0
+      },
+      {
+        "label": "Date (Anticoagulation Monitoring)",
+        "rendering": "date",
+        "answers": 0
+      }
+    ]
+  },
+  "pregnancy_forms": {
+    "act_labels": [
+      "Birth Weight",
+      "Date of Delivery",
+      "Date of Last Menstrual Period",
+      "Date of Service",
+      "Delivery Location",
+      "Delivery Mode",
+      "Estimated Due Date",
+      "Fetal Outcome",
+      "Gestational Age (in weeks)",
+      "Gravidity",
+      "Maternal Complications During Pregnancy",
+      "Maternal Complications Postpartum",
+      "Neonatal Outcomes",
+      "Number of Fetuses",
+      "Parity"
+    ],
+    "act_fields": [
+      "birth_weight",
+      "cesarean_reason",
+      "date_of_delivery",
+      "date_of_last_menstrual_period",
+      "date_of_service",
+      "description",
+      "emotion-insertion-point",
+      "estimated_due_date",
+      "gestational_age",
+      "gravidity",
+      "maternal_cause_of_death_description",
+      "maternal_complications_postpartum_description",
+      "neonatal_cause_of_death_description",
+      "neonatal_outcomes_description",
+      "parity",
+      "theme-color",
+      "viewport"
+    ],
+    "o3_forms": [
+      "RHD Pregnancy"
+    ],
+    "o3_questions": [
+      {
+        "label": "Estimated Due Date",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "Pregnancy Number",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Number of Fetuses",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Maternal Complications During Pregnancy",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Fetal Outcomes",
+        "rendering": "group",
+        "answers": 0
+      },
+      {
+        "label": "Fetal Outcomes",
+        "rendering": "checkbox",
+        "answers": 7
+      },
+      {
+        "label": "Delivery mode",
+        "rendering": "select",
+        "answers": 2
+      },
+      {
+        "label": "Location of Delivery",
+        "rendering": "select",
+        "answers": 6
+      },
+      {
+        "label": "Estimated Gestational Age at Delivery (weeks)",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Neonatal weight (kg)",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Maternal Complications Within 30 Days After Pregnancy",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Maternal Cause of Death",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Neonatal Outcomes 30 Days After Delivery",
+        "rendering": "select",
+        "answers": 3
+      },
+      {
+        "label": "Neontal Cause of Death",
+        "rendering": "text",
+        "answers": 0
+      }
+    ]
+  },
+  "hospital_admission_forms": {
+    "act_labels": [
+      "Date Admitted *",
+      "Details",
+      "Facility",
+      "Outcome",
+      "Reason for Admission"
+    ],
+    "act_fields": [
+      "date_of_discharge",
+      "date_of_service",
+      "description",
+      "details",
+      "emotion-insertion-point",
+      "facility",
+      "theme-color",
+      "transfer_to_where",
+      "viewport"
+    ],
+    "o3_forms": [
+      "RHD Hospital Admission"
+    ],
+    "o3_questions": [
+      {
+        "label": "Date Admitted",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "Facility",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Reason for Admission",
+        "rendering": "select",
+        "answers": 7
+      },
+      {
+        "label": "Details (Hospital Admission)",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "To Where?",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Date of Discharge",
+        "rendering": "date",
+        "answers": 0
+      }
+    ]
+  },
+  "interventions_and_outcomes_forms": {
+    "act_labels": [
+      "BSA",
+      "Bacterial Sepsis",
+      "Blood Group",
+      "Date of Patient Follow-Up",
+      "Date of Procedure",
+      "Describe Bacterial Sepsis",
+      "Describe Patient's Current Condition",
+      "Describe Perfusion Issues",
+      "Describe Site Infection",
+      "Height",
+      "How was the patient contacted?",
+      "ICU Stay",
+      "Is Patient Alive",
+      "Oxygen Saturation",
+      "Patient Follow-Up Required",
+      "Perfusion Issues",
+      "Primary Surgeon/Cardiologist",
+      "Procedural Outcome",
+      "Procedure Location",
+      "Procedure Type",
+      "RACHs Score",
+      "Site Infection",
+      "Ventilation Time",
+      "Was the patient rehospitalized within 30 days?",
+      "Weight",
+      "With Visiting Team",
+      "days",
+      "hours"
+    ],
+    "act_fields": [
+      "brief_summary_of_catheterization",
+      "cardiopulmonary_bipass_time",
+      "date_of_death",
+      "date_of_death_followup",
+      "date_of_hospital_discharge",
+      "date_of_service",
+      "date_patient_follow_up",
+      "describe_bacterial_sepsis",
+      "describe_events_around_patient_death",
+      "describe_patient_current_condition",
+      "describe_perfusion_issues",
+      "describe_site_infection",
+      "description",
+      "emotion-insertion-point",
+      "height",
+      "how_was_patient_contacted",
+      "icu_stay_hours",
+      "key_findings_and_surgical_notes",
+      "mitral_valve_area",
+      "organism_identified",
+      "other_major_complications",
+      "oxygen_saturation",
+      "post_catheterization_diagnosis",
+      "post_inflation_la_pressure",
+      "post_inflation_lv_pressure",
+      "post_surgical_diagnosis",
+      "pre_catheterization_diagnosis",
+      "pre_inflation_la_pressure",
+      "pre_inflation_lv_pressure",
+      "presurgical_diagnosis",
+      "primary_surgeon_or_cardiologist",
+      "rehospitalization_date",
+      "rehospitalization_description",
+      "theme-color",
+      "ventilation_time_hours",
+      "viewport",
+      "weight"
+    ],
+    "o3_forms": [
+      "RHD Interventions and Outcomes",
+      "RHD Cardiac Intervention"
+    ],
+    "o3_questions": [
+      {
+        "label": "Procedure Date",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "Procedure Location",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Procedure Type",
+        "rendering": "group",
+        "answers": 0
+      },
+      {
+        "label": "Procedure Type",
+        "rendering": "checkbox",
+        "answers": 3
+      },
+      {
+        "label": "Surgery Type(s)",
+        "rendering": "group",
+        "answers": 0
+      },
+      {
+        "label": "Surgery Type(s)",
+        "rendering": "checkbox",
+        "answers": 5
+      },
+      {
+        "label": "Indication for Surgery",
+        "rendering": "select",
+        "answers": 4
+      },
+      {
+        "label": "Reason for Surgery",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Open Chest After Surgery",
+        "rendering": "radio",
+        "answers": 2
+      },
+      {
+        "label": "Required Additional Surgery for Bleeding",
+        "rendering": "radio",
+        "answers": 2
+      },
+      {
+        "label": "Describe",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Other Pertinent Medical Information",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Surgery Outcome",
+        "rendering": "select",
+        "answers": 3
+      },
+      {
+        "label": "Date of Hospital Discharge",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "ICU Stay",
+        "rendering": "number",
+        "answers": 0
+      },
+      {
+        "label": "Ventilation Time",
+        "rendering": "number",
+        "answers": 0
+      },
+      {
+        "label": "Perfusion Issues",
+        "rendering": "radio",
+        "answers": 2
+      },
+      {
+        "label": "Surgical Site Infection",
+        "rendering": "radio",
+        "answers": 2
+      },
+      {
+        "label": "Bacterial Sepsis",
+        "rendering": "radio",
+        "answers": 2
+      },
+      {
+        "label": "Organism Identified (if Known)",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Other Major Complications Assiciated with Surgery",
+        "rendering": "radio",
+        "answers": 2
+      },
+      {
+        "label": "Date of Patient Follow-up Contact",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "Is Patient Alive?",
+        "rendering": "radio",
+        "answers": 2
+      },
+      {
+        "label": "How was the patient contacted?",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Is the patient OK?",
+        "rendering": "radio",
+        "answers": 2
+      },
+      {
+        "label": "Describe the patient's current condition",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Catheterization Type(s)",
+        "rendering": "group",
+        "answers": 0
+      },
+      {
+        "label": "Catheterization Type(s)",
+        "rendering": "checkbox",
+        "answers": 3
+      },
+      {
+        "label": "Indication for catheterization",
+        "rendering": "group",
+        "answers": 0
+      },
+      {
+        "label": "Indication for catheterization",
+        "rendering": "checkbox",
+        "answers": 4
+      },
+      {
+        "label": "Pre-Catheterization Diagnosis",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Brief Summary of Catheterization",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Post-Catheterization Diagnosis",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Anaesthesia",
+        "rendering": "group",
+        "answers": 0
+      },
+      {
+        "label": "Anaesthesia",
+        "rendering": "checkbox",
+        "answers": 2
+      },
+      {
+        "label": "Pre-Inflation: LA Pressure",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Pre-Inflation: LV Pressure",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Post-Inflation: LA Pressure",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Post-Inflation: LV Pressure",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Mitral Valve Area",
+        "rendering": "select",
+        "answers": 2
+      },
+      {
+        "label": "Date of Intervention",
+        "rendering": "date",
+        "answers": 0
+      },
+      {
+        "label": "Location",
+        "rendering": "text",
+        "answers": 0
+      },
+      {
+        "label": "Procedure performed",
+        "rendering": "group",
+        "answers": 0
+      },
+      {
+        "label": "Procedure performed",
+        "rendering": "checkbox",
+        "answers": 7
+      }
+    ]
+  },
+  "research_participation_form": {
+    "act_labels": [
+      "Would you like to be considered?"
+    ],
+    "act_fields": [
+      "description",
+      "emotion-insertion-point",
+      "theme-color",
+      "viewport"
+    ],
+    "o3_forms": [],
+    "o3_questions": []
+  }
+}
