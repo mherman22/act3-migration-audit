@@ -31,6 +31,26 @@ form *content*, and it is the larger remaining body of work.
 | `rhd_consultation` | 1 | contraindications |
 | `rhd_adherence` | 1 | explanation below 80% |
 
+## Side-by-side evidence
+
+ACT 2.0 on the left, ACT 3.0 on the right, both captured from the running systems.
+
+### Interventions and Outcomes
+
+![Interventions and Outcomes](../screenshots/field-parity/interventions-and-outcomes.png)
+
+### Pregnancy
+
+![Pregnancy](../screenshots/field-parity/pregnancy.png)
+
+### BPG Delivery
+
+`Facility` and `Injection Tolerance` are visible on the ACT 2.0 side with no counterpart on the
+right, and the ACT 3.0 Adverse Reaction list shows `Leg numbness` where ACT 2.0 has
+`Leg swelling >48 hours post-injection`.
+
+![BPG Delivery](../screenshots/field-parity/bpg-delivery.png)
+
 ## Interventions and Outcomes, 19 fields
 
 The largest gap. ACT 2.0's `InterventionsAndOutcomesForms.tsx` carries a full operative and
@@ -108,6 +128,13 @@ These appear as ACT 2.0 fields but should not be form questions in ACT 3.0:
 | First Name, Family Name, Sex, Alternate ID | OpenMRS patient registration |
 | Status, Reason Inactive, Date of Status Change | the RHD Registry Status program workflow, which is better modelling than ACT 2.0's |
 | Height, Weight, Oxygen Saturation, Systolic/Diastolic BP | present, in `rhd_consultation` rather than `rhd_interventions` |
+
+## A note on the screenshots
+
+ACT 2.0 was not running when these were composed, so its panels are the captures taken on
+11 September and stored in `screenshots/act2-source/`. The ACT 3.0 panels are fresh, taken at
+PR #3 head. There is no ACT 2.0 capture of Patient Information, so that form has no
+side-by-side image even though it has 6 gaps.
 
 ## Residual risk in this count
 
