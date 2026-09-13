@@ -15,6 +15,7 @@ This repository holds only screenshots and findings. No application code.
 | [findings/02-distro-setup-defects.md](findings/02-distro-setup-defects.md) | Problems that stop the distro being usable from a clean clone |
 | [findings/03-form-defects-fixed.md](findings/03-form-defects-fixed.md) | Two form defects found, fixed and verified before/after |
 | [findings/04-method.md](findings/04-method.md) | How this was measured, two methods that gave false results, and how to reproduce |
+| [findings/05-field-parity-reverify.md](findings/05-field-parity-reverify.md) | Source-level field parity re-run after PR #3; ~37 ACT 2.0 fields still have no counterpart |
 
 ## Headline findings
 
