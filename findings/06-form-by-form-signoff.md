@@ -27,17 +27,28 @@ counterpart in source.
 | rhd_interventions | 54 | 36 | 0 | InterventionsAndOutcomesForms (45) | complete |
 | rhd_patient_information | 13 | 4 | 0 | PatientInformationForm (23) | complete, see note |
 | rhd_pregnancy | 19 | 7 | 1 | PregnancyForm (22) | complete |
-| rhd_allergies | 4 | 1 | 0 | none | ACT 3.0 only |
-| rhd_anticoagulation | 2 | 0 | 1 | none | ACT 3.0 only |
-| rhd_anticoagulation_monitoring | 1 | 0 | 1 | none | ACT 3.0 only |
-| rhd_cardiac_intervention | 3 | 0 | 1 | none | ACT 3.0 only |
-| rhd_chronic_conditions | 6 | 0 | 0 | none | ACT 3.0 only |
+| rhd_allergies | 4 | 1 | 0 | Consultation sub-entity | complete |
+| rhd_anticoagulation | 2 | 0 | 1 | INR Monitoring (partial) | complete |
+| rhd_anticoagulation_monitoring | 1 | 0 | 1 | INR Monitoring (partial) | complete |
+| rhd_cardiac_intervention | 3 | 0 | 1 | Interventions (partial) | complete |
+| rhd_chronic_conditions | 6 | 0 | 0 | Consultation sub-entity | complete |
 | rhd_consultation_update | 2 | 1 | 0 | none | ACT 3.0 only |
-| rhd_recommendations | 5 | 3 | 1 | none | ACT 3.0 only |
+| rhd_recommendations | 5 | 3 | 1 | Consultation sub-entity | complete |
 
 ACT 2.0 field counts are lower because its Consultation Visit and Patient Information forms
-carry fields that ACT 3.0 places elsewhere: registration, the program workflow, or one of the
-seven ACT 3.0-only forms which decompose ACT 2.0's monolithic consultation.
+carry fields ACT 3.0 places elsewhere: registration, the program workflow, or one of the seven
+smaller forms.
+
+Five of those seven are not new. ACT 2.0's consultation renders them as **repeating
+sub-entities** through `MultiElementDisplay`, which a scan of form controls does not see:
+
+```
+allergies, chronic_health_conditions, rhd_complications,
+secondary_antibiotic_prophylaxis, interventional_recommendations
+```
+
+ACT 3.0 promotes them to first-class forms. That is a modelling improvement, not a gap, and it
+is why an earlier draft of this document wrongly labelled them "ACT 3.0 only".
 
 ## What changed to get here
 
@@ -224,6 +235,63 @@ Contraindications for Mechanical Valve added.
 **Caveat**: 40 of this form's 41 conditions are **answer-level** hides inside the
 `interventionalRecommendationEntry` repeat group, and those do not re-evaluate per row. See
 the known issue below.
+
+
+### Allergies
+
+![Allergies](../screenshots/signoff/allergies.png)
+
+ACT 2.0's `allergies` sub-entity, promoted to its own form. Penicillin Allergy gates Evidence,
+matching the pattern ACT 2.0 uses inside the consultation grid. Three `required` flags dropped
+here, since ACT 2.0 marks none.
+
+### Chronic Health Conditions
+
+![Chronic Health Conditions](../screenshots/signoff/chronic_conditions.png)
+
+ACT 2.0's `chronic_health_conditions` sub-entity. Six coded groups: Hematology/Oncology,
+Cardiovascular, Chronic Respiratory, Digestive, Neurological/Mental Health, Diabetes and
+Kidney. One `required` flag dropped.
+
+Note the label typo `Neurological/Metal Health`, which is pre-existing and not corrected here
+because it is a concept name and renaming one changes what is already recorded against it.
+
+### Interventional Recommendations
+
+![Interventional Recommendations](../screenshots/signoff/recommendations.png)
+
+ACT 2.0's `interventional_recommendations` sub-entity. Type of Intervention gates the
+catheterization and surgery type fields, which is the same pattern as
+`rhd_consultation`'s repeat group but at form level, so it works correctly per instance.
+
+### Anticoagulation and Anticoagulation Monitoring
+
+![Anticoagulation](../screenshots/signoff/anticoagulation.png)
+
+![Anticoagulation Monitoring](../screenshots/signoff/anticoagulation_monitoring.png)
+
+ACT 2.0 keeps anticoagulation type alongside INR monitoring. ACT 3.0 splits the type, the
+monitoring date and the INR values across three forms. The monitoring form renders no labels
+because its only field is a date, and O3 date pickers carry no `label` element, which is worth
+knowing before reading a zero as a fault.
+
+### Cardiac Intervention
+
+![Cardiac Intervention](../screenshots/signoff/cardiac_intervention.png)
+
+Date, location and procedure performed. Overlaps ACT 2.0's Interventions and Outcomes, which
+ACT 3.0 also carries in full as `rhd_interventions`. Worth confirming with the team whether
+both are intended, since the overlap is the one piece of this mapping that looks like
+duplication rather than decomposition.
+
+### Consultation Update
+
+![Consultation Update](../screenshots/signoff/consultation_update.png)
+
+Follow-up Appointments and Reason for RHD Clinic Appointment. The only one of the eighteen
+with no ACT 2.0 counterpart at all. `Follow-up Appointments` here is the trigger that
+`rhd_consultation`'s deleted `nextConsultationTimePeriod` note referred to, which is why that
+note could not be converted: the field lives in a different form.
 
 ## Known issues, not fixed here
 
