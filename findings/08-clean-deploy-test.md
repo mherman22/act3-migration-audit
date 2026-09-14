@@ -10,7 +10,7 @@ earlier database.
 |---|---|
 | RHD forms loaded | 18 / 18 |
 | Duplicate concept names | 0 |
-| Concepts | 4937 |
+| Concepts | 4937 (4900 not retired) |
 | Locations tagged `Login Location` | 8 |
 | Locations tagged `Queue Location` | 8 |
 | Form schema errors (`json.openmrs.org/form.schema.json`) | 0 |
