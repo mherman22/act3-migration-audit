@@ -17,6 +17,7 @@ This repository holds only screenshots and findings. No application code.
 | [findings/04-method.md](findings/04-method.md) | How this was measured, two methods that gave false results, and how to reproduce |
 | [findings/05-field-parity-reverify.md](findings/05-field-parity-reverify.md) | Source-level field parity re-run after PR #3; ~37 ACT 2.0 fields still have no counterpart |
 | [findings/06-form-by-form-signoff.md](findings/06-form-by-form-signoff.md) | Every form opened on a clean instance and compared with ACT 2.0; what was fixed and what remains |
+| [findings/07-review-order.md](findings/07-review-order.md) | Which forms to test first before merging PR #3, and what to look out for |
 
 ## Headline findings
 
