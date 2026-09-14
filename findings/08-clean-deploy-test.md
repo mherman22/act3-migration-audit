@@ -37,9 +37,11 @@ groupings used for reporting; no form references them, and all 18 forms render w
 The reference demo data generator aborts on this distro with
 `APIException: Could not find identifier type OpenMRS ID`, so a from-scratch database contains
 zero patients. The RHD `patientidentifiertypes` bind mount replaces the package folder rather than
-nesting under it, so the package's own identifier types never load. Pre-existing on `main` and
-outside this PR; three patients (living male, living female, deceased) and an open RHD Clinic Visit
-each were created over REST to run the tests below.
+nesting under it, so the package's own identifier types never load. Restoring them needs three
+mounts, not one, and eight other mounts hide package content the same way; see
+[09-shadowing-config-mounts.md](09-shadowing-config-mounts.md). Pre-existing on `main` and outside
+this PR; three patients (living male, living female, deceased) and an open RHD Clinic Visit each
+were created over REST to run the tests below.
 
 ## Acceptance suites
 
