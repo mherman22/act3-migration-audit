@@ -98,6 +98,32 @@ Separately, the same arithmetic was stepped through for every offered page size 
 loses rows at today's 100. With the guard, no page size skips or repeats a row at either server
 page size.
 
+## Reproducing the data
+
+[`scripts/seed-dashboard-orders.sql`](../scripts/seed-dashboard-orders.sql) loads N in-progress
+orders straight into the dev database, one `sample` + `sample_item` + `analysis` per order with the
+analysis in the status the `ORDERS_IN_PROGRESS` tile selects on. 400 orders take about half a
+second:
+
+```
+docker exec -i openelisglobal-database \
+  psql -U clinlims -d clinlims -v ON_ERROR_STOP=1 -v n=400 < scripts/seed-dashboard-orders.sql
+```
+
+Run against an empty dev database on 14 September 2026: 400 rows inserted, spread over 10 test
+sections and 181 active tests, accessions `PAG0000001` to `PAG0000400`. The teardown at the foot of
+the script was run and rolled back, so it is known to work.
+
+150 orders is not enough to see the defect. Server pages hold 100 rows, and the two page mappings
+only diverge from the third server page on, so seed at least 300.
+
+Two things to get right when testing against this data. `ORDERS_IN_PROGRESS` is in `tilesWithTabs`,
+and the PR falls back to the old per-server-page behaviour whenever a specific test section is
+selected; non-admins get `sections[0]` preselected, so sign in as a Global Administrator and stay on
+the **All** tab or the new cross-page paging never engages. And these rows are inserted below
+`SampleAddService`, so they are not full orders: no patient linkage, no FHIR resources, no results.
+Fine for pagination, not for anything downstream.
+
 ## Not covered
 
 This was not run against a live OpenELIS instance with 400 dashboard rows. What is reproduced is
